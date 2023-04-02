@@ -6,4 +6,4 @@ def DecToBin(n):
     print(BinNum)
 
 
-DecToBin(5)
+DecToBin(20)
