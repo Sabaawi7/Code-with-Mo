@@ -15,7 +15,6 @@ sp.call("mkdir WifiData", shell=True, stdout=sp.DEVNULL,
 sp.call("netsh wlan export profile key=clear",cwd="WifiData" ,shell= True, stdout=sp.DEVNULL,
     stderr=sp.STDOUT)
 
-
 print("Almost Done...")
 
 sleep(2)
@@ -41,13 +40,8 @@ for file in listdir("WifiData"):
     }
     WifiList.append(WifiDict)
 
-
 # Export WifiData to an HTML File
 df = pd.DataFrame.from_dict(WifiList)
 df.to_html("WifiData.html")
 
 print("Done!")
-
-
-
-
