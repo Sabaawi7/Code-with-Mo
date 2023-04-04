@@ -1,6 +1,7 @@
 # let me know when ur here
 import requests
 from bs4 import BeautifulSoup
+import pandas as pd
 
 with open('C:\\Users\\moham\\VSCode\\Auto.html', encoding='utf-8') as file:
     html = file.read()
@@ -24,21 +25,25 @@ def get_Erstzulassung(value):
     return value[3:value.index(",")]
 
 def get_KilometerStand(value):
-    return value[value.index(",")+2:value.index("m")+1]
+    km = value[value.index(",")+2:value.index("m")+1]
+    km_filtered = "".join(filter(str.isdigit, km))
+    km_num = int(km_filtered)
+    return km_num
 
 def get_Leistung(value):
-    return value[value.index("m")+3:]
+    leistung = value[value.index("m")+3:]
+    output_string = ''.join(filter(str.isalnum, leistung)).replace('\xa0', ' ')  
+    return output_string[0:5] + " (" + output_string[5:] + ")" 
 def get_Price(value):
-    if value != "skip":
-        price_string = ''.join(filter(str.isdigit, value))
-        priceNum = int(price_string)
-        return priceNum
-    else:
-        pass
+    
+    price_string = ''.join(filter(str.isdigit, value))
+    priceNum = int(price_string)
+    return priceNum
+    
     
 AutoInfo = {
     "Name": None,
-    "Preis": None,
+    "Price": None,
     "Kilometerstand":"helo", 
     "Erstzulassung":"",
     "Leistung":""
@@ -53,21 +58,26 @@ Autoliste = []
 for data in Autodata_list:
     #if type(data) == 
     # print(type)
-    name = str(data.find_next('span', {'class': 'h3 u-text-break-word'}))
-    price = data.find_next(class: 'h3 u-block')
-    price_desc = price.getText() if price else "skip"
-    print(price)
-    
-    
-    value = data.text.strip()
+    name = data.find_next('span', {'class': 'h3 u-text-break-word'})
+    price = data.find_next('span', {'class': 'h3 u-block'})
+    value = data.string
+    if name or price is not None:
+        print(name)
+        print(price)
+        print (value)
 
-    AutoInfo["Name"] = name
-    AutoInfo["Price"] = get_Price(price_desc)
-    AutoInfo["Kilometerstand"] = get_KilometerStand(value)
-    AutoInfo["Erstzulassung"] = get_Erstzulassung(value)
-    AutoInfo["Leistung"] = get_Leistung(value)
+        AutoInfo["Name"] = name.string
+        AutoInfo["Price"] = get_Price(price.string)
+        AutoInfo["Kilometerstand"] = get_KilometerStand(value)
+        AutoInfo["Erstzulassung"] = get_Erstzulassung(value)
+        AutoInfo["Leistung"] = get_Leistung(value)
 
-    Autoliste.append(AutoInfo)
+        Autoliste.append(AutoInfo)
+    else:
+        continue
+      
+    
+   
    # print(name, price, value)
     #print()
 
@@ -76,7 +86,7 @@ for data in Autodata_list:
 
 print(Autoliste)
 
-test = "EZ 12/2020, 19.778 km, 180 kW (245 PS)"
+# test = "EZ 12/2020, 19.778 km, 180 kW (245 PS)"
 
 # print(get_Erstzulassung(test))
 
