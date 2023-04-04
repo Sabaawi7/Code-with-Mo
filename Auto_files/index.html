@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<!-- saved from url=(0134)https://s0.2mdn.net/sadbundle/15216462441102704640/index.html?e=69&leftOffset=0&topOffset=0&c=bInGbOZWWt&t=4&renderingType=2&ev=01_247 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <script src="./anime.min.js.Herunterladen"></script>
+    <script src="./flubber.min.js.Herunterladen"></script>
+    <script src="./Enabler_01_247.js.Herunterladen"></script>
+    <script src="./gsap_3.9.1_min.js.Herunterladen"></script>
+    <!-- DynamicContent Start: HTML5 invocation code. -->
+    <script type="text/javascript">
+
+        // Dynamic Content variables and sample values
+        Enabler.setProfileId(10792112);
+        var devDynamicContent = {};
+
+        devDynamicContent.feed = [ {} ];
+        devDynamicContent.feed[ 0 ]._id = 0;
+        devDynamicContent.feed[ 0 ].id = "51\/1018879\/1617532\/3411863";
+        devDynamicContent.feed[ 0 ].cityintro = "Freiburg";
+        devDynamicContent.feed[ 0 ].dealer_id = "40994";
+        devDynamicContent.feed[ 0 ].dealer_name = "Autohaus Rastetter GmbH";
+        devDynamicContent.feed[ 0 ].street = "Basler Str. 105";
+        devDynamicContent.feed[ 0 ].zip = "79115";
+        devDynamicContent.feed[ 0 ].city = "Freiburg";
+        devDynamicContent.feed[ 0 ].dealer_offer = "";
+        devDynamicContent.feed[ 0 ].offer_care = " ";
+        devDynamicContent.feed[ 0 ].exit_url = {};
+        devDynamicContent.feed[ 0 ].exit_url.Url = "http://rastetter.cupra.de?idcmp=dlr::cupra-born-wir-image:cupra-born:%s:Awareness:%s:{{format}}_40994:desktop:cpm:%eexpid!-cvid_%ecid!";
+        devDynamicContent.feed[ 0 ].isDefault = false;
+        devDynamicContent.feed[ 0 ].isActive = true;
+        Enabler.setDevDynamicContent(devDynamicContent);
+
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @font-face {
+            font-family: 'cupraregular';
+            src: url('cupra-regular-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'cuprabold';
+            src: url('cupra-bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        sup,
+        sub {
+            vertical-align: baseline;
+            position: relative;
+        }
+
+        sub {
+            top: 0.35em;
+            font-size: 12x;
+        }
+
+
+        .over sub {
+            top: 0.35em;
+            font-size: 8px;
+        }
+
+        sup {
+            top: -0.75em;
+            font-size: 10px;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            width: 300px;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            color: #f8f8f8;
+            background: #031e39;
+            background-image: url("bg.jpg");
+            background-size: cover;
+        }
+
+        .img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .img img {
+            width: 100%;
+        }
+
+        * {
+            animation-fill-mode: forwards;
+        }
+
+        #t1,
+        #t2,
+        #t3,
+        #t4,
+        #t5,
+        #legal,
+        #button {
+            opacity: 0;
+        }
+
+        #t1,
+        #t2,
+        #t3,
+        #t4,
+        #t5,
+        #legal,
+        #button {
+            z-index: 1;
+        }
+
+        #container #button-hover {
+            opacity: 0;
+            z-index: 222222;
+        }
+
+        #container:hover #button-hover {
+            opacity: 1;
+            z-index: 20;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .animation {
+            position: absolute;
+        }
+
+        #group1 {
+            position: absolute;
+            width: 300px;
+            height: 600px;
+            opacity: 1;
+            z-index: 2000;
+            opacity: 0;
+        }
+
+        #t1 {
+            opacity: 0;
+            transform: scale(1);
+        }
+
+        #car1 {
+            top: 175px;
+            left: 0;
+            position: absolute;
+            z-index: 30000;
+            opacity: 0;
+        }
+
+        #car2 {
+            top: 175px;
+            left: 0;
+            position: absolute;
+            z-index: 30000;
+            opacity: 0;
+        }
+
+        #car3 {
+            top: 175px;
+            left: 0;
+            position: absolute;
+            z-index: 30000;
+            opacity: 0;
+        }
+
+        #shadow {
+            position: absolute;
+            top: 370px;
+            left: 25px;
+            width: 250px;
+            z-index: 2;
+            opacity: 0;
+        }
+
+        #legal {
+            z-index: 30000;
+        }
+
+        #legal img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #offer_copy {
+            font-size: 20px;
+            line-height: 100%;
+            font-family: 'cupraregular';
+            text-align: left;
+            text-transform: uppercase;
+            left: 19px;
+            top: 454px;
+            opacity: 0;
+        }
+
+
+
+        #dealerpush {
+            position: absolute;
+            top: 415px;
+            left: 19px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 270px;
+            height: 110px;
+        }
+
+
+        #dealer {
+            position: unset;
+            opacity: 0;
+            left: 19px;
+        }
+
+        #dealername {
+            font-size: 20px;
+            line-height: 100%;
+            text-transform: uppercase;
+            font-family: 'cupraregular';
+        }
+
+        #address {
+            margin-top: 5px;
+            font-size: 13px;
+            line-height: 100%;
+            text-transform: uppercase;
+            font-family: 'cupraregular';
+        }
+
+        #supline {
+            position: unset;
+            opacity: 0;
+            font-size: 11px;
+            line-height: 100%;
+            font-family: 'cuprabold';
+        }
+
+        #subline {
+            opacity: 0;
+            position: absolute;
+            top: 481px;
+            left: 19px;
+            font-size: 13px;
+            line-height: 100%;
+            font-family: 'cupraregular';
+        }
+
+
+        .over {
+            width: 300px;
+            height: 600px;
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            justify-content: center;
+            font-family: 'cupraregular';
+            top: 0;
+            left: 0;
+            z-index: 10000000;
+            background-color: #031e39;
+            font-size: 14px;
+            line-height: 130%;
+            box-sizing: border-box;
+            color: #ffffff;
+        }
+
+        .over-content {
+            padding: 20px;
+        }
+
+        #dat-trigger {
+            position: absolute;
+            top: 569px;
+            left: 13px;
+            width: 96px;
+            height: 21px;
+            z-index: 1000000;
+            cursor: pointer;
+        }
+
+        a,
+        a:visited,
+        a:hover {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        #close {
+            color: #ffffff;
+            font-size: 30px;
+            right: 20px;
+            top: 20px;
+            position: absolute;
+            z-index: inherit;
+            font-family: 'cupraregular';
+            cursor: pointer;
+        }
+
+        #masked-image {
+            width: 300px;
+            height: 600px;
+            -webkit-clip-path: url(#shape);
+            clip-path: url(#shape);
+            position: absolute;
+            transform: scale(0.9) translateY(-25px);
+        }
+
+        #masked-image-inner {
+            position: relative;
+            width: 600px;
+            height: 500px;
+            transform: scale(1.2);
+        }
+
+        #logo {
+            opacity: 0;
+        }
+
+        #t2 {
+            z-index: 20000;
+        }
+
+        /* small small */
+        #dealer.name-small.address-small #dealername {
+            font-size: 15px;
+        }
+
+
+        /* small normal */
+
+        #dealer.name-small.address-normal #dealername {
+            font-size: 17px;
+        }
+
+        #dealer.name-small.address-normal #address {}
+
+        #cityintro_wrapper {
+            position: absolute;
+            font-family: 'cupraregular';
+            font-size: 15px;
+            top: 144px;
+            right: 19px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            line-height: 110%;
+            opacity: 0;
+            text-align: right;
+        }
+    </style>
+    <script>
+        function GetIEVersion()
+        {
+            var sAgent = window.navigator.userAgent;
+            var Idx = sAgent.indexOf("MSIE");
+            if (Idx > 0)
+                return parseInt(sAgent.substring(Idx + 5, sAgent.indexOf(".", Idx)));
+            else if (!!navigator.userAgent.match(/Trident\/7\./))
+                return 11;
+            else
+                return 0;
+        }
+
+
+        let loop_counter = 0;
+        let tl = null;
+
+
+        function startMorph(startSelector, endSelector, speed)
+        {
+
+            const star = document.querySelector(startSelector);
+            const target = document.querySelector(endSelector);
+            const interpolator = flubber.interpolate(
+                star.getAttribute('d'),
+                target.getAttribute('d'),
+                { maxSegmentLength: 1 }
+            )
+            let val = { prop: 0 }
+
+            anime({
+                targets: val,
+                prop: 1,
+                duration: speed,
+                easing: 'easeInOutQuint',
+                update(anim)
+                {
+                    star.setAttribute('d', interpolator(val.prop))
+                }
+            });
+        }
+        const maxLoop = 3;
+        let loopCount = 0;
+
+        let paths = {};
+
+        paths[ "shape1" ] =
+            "M86,102.13a8,8,0,0,1,6.88-4.58h0l35.54,1.67a7.37,7.37,0,0,1,5.37,2.46l.09,0s73.79,69.52,79.59,73.61c3.92,2.76,9.23-3.22,9.23-8.74V57.31c0-7.81-2.45-12.12-9.6-17.16S157.9,2,157.9,2A12.85,12.85,0,0,0,151,0c-5.46,0-10.23,3.53-12.89,8.81l-32.33,47c-1.69,2.64-4.14,6-7.5,6L15.14,63.89C6.78,63.89,0,72.15,0,82.34v74.94c0,10.19,6.78,18.45,15.14,18.45l27.15-1.57A7.89,7.89,0,0,0,49,169.9C49.94,168.28,86,102.13,86,102.13Z";
+
+        paths[ "shape2" ] =
+            "M146.6,14.9c-2.25,9.54-4.83,22.43-6.66,28.72s-3.69,8.25-8.24,8.25c-2.06,0-65-24.28-65-24.28h0a15.17,15.17,0,0,0-18.34,4.14S8.49,71.77,5.62,74.42,0,81.46,0,86.23v64.13c0,16.71,1.37,17.4,15.23,15.22,1.75-.27,39.85-6.87,46.15-8s6.76-1.6,8.25-8.25S78,111.19,79.7,102.72s6.82-15.23,15.23-15.23c.6,0,60.69,4.06,60.69,4.06.32,0,4.84.06,5.16.06,5.72,0,59.09-31,59.09-31a8.21,8.21,0,0,0,3.21-6.51l.22-38.82C223.3.79,221.59,0,208.07,0H161.81C149.44,0,149.44,2.86,146.6,14.9Z";
+
+        paths[ "shape3" ] =
+            "M66.58,246.38,29.36,320.79a4.43,4.43,0,0,0-.62,3.21A4.62,4.62,0,0,0,32,327.66c.45.13,37.3,8.93,39.7,9.64A4.65,4.65,0,0,1,73.89,345c-.4.51-24.71,29.75-25.64,31.13a5.22,5.22,0,0,0-1,3.24,5.32,5.32,0,0,0,.67,2l15.42,22.13a11.35,11.35,0,0,0,2.6,2.15,7.13,7.13,0,0,0,3.44,1.11,9.8,9.8,0,0,0,2.08,0c.84-.12,185.13-23.18,185.51-23.23a4.5,4.5,0,0,0,2.78-1.44A5.47,5.47,0,0,0,261,379l4.54-54.36a21.78,21.78,0,0,0,0-2.85,7.9,7.9,0,0,0-1.91-4.35,12.17,12.17,0,0,0-4.38-3c-.44-.13-186.44-69.59-186.68-69.67-3.24-1.12-5,0-6,1.67";
+
+        paths[ "shape4" ] =
+            "M29.8,247.49a11.38,11.38,0,0,0-7.14.78c-2.42,1.08-5.87,4.89-5.92,8.75S22,360.09,22.07,362.18a5.19,5.19,0,0,0,4.86,5.18c3.16.34,105.6,10.51,105.6,10.51a6.59,6.59,0,0,1,1.56.48c6.6,3,99.84,51.18,99.76,51.14a5.38,5.38,0,0,0,5.85-.67,5.47,5.47,0,0,0,1.78-3.24L282.92,301.5s1.87-4.47-3.18-7a3.75,3.75,0,0,0-2.52-.19L240.76,304c-2.83.75-4.57.8-6,.38-2.26-.64-204.92-56.93-204.92-56.93";
+
+
+        let stages = [
+            "shape1",
+            "shape2",
+            "shape3"
+        ];
+        function reset()
+        {
+
+            tl.pause();
+            gsap.set("#car1, #car2, #car3, #t1, #t2, #t3, #t4, #offer_copy, #subline, #supline, #dealer, #dealername, #address", { opacity: 0 });
+
+        }
+
+        function showDealer()
+        {
+            document.getElementById("target").setAttribute("d", paths[ "shape3" ]);
+            setTimeout(function () { startMorph('.js-star', '.js-target', 1500); }, 10);
+            document.getElementById("supline").style.opacity = 1;
+            document.getElementById("dealer").style.opacity = 1;
+            document.getElementById("dealername").style.opacity = 1;
+            document.getElementById("address").style.opacity = 1;
+            document.getElementById("car2").style.opacity = 1;
+        }
+
+        function showOffer()
+        {
+            document.getElementById("target").setAttribute("d", paths[ "shape4" ]);
+            setTimeout(function () { startMorph('.js-star', '.js-target', 1500); }, 10);
+            document.getElementById("offer_copy").style.opacity = 1;
+            document.getElementById("subline").style.opacity = 1;
+            document.getElementById("car1").style.opacity = 1;
+        }
+
+
+
+        function init()
+        {
+            document.getElementById("container").addEventListener("click", bgExitHandler);
+
+            var dealer_name = dynamicContent.feed[ 0 ].dealer_name;
+            var dealer_address = dynamicContent.feed[ 0 ].street + ", " + dynamicContent.feed[ 0 ].zip + " " + dynamicContent.feed[ 0 ].city;
+
+            document.getElementById("address").innerHTML = dealer_address;
+
+            if (dealer_name.length > 39)
+            {
+                document.getElementById("dealer").classList.add("name-small");
+            } else
+            {
+                document.getElementById("dealer").classList.add("name-normal");
+            }
+
+            if (dealer_address.length > 30)
+            {
+                document.getElementById("dealer").classList.add("address-small");
+            } else
+            {
+                document.getElementById("dealer").classList.add("address-normal");
+            }
+
+
+            document.getElementById("cityintro").innerHTML = dynamicContent.feed[ 0 ].cityintro;
+            document.getElementById("dealername").innerHTML = dealer_name;
+            document.getElementById("address").innerHTML = dealer_address;
+
+
+            gsap.config({
+                force3D: false,
+            });
+            gsap.set("#car1, #car2, #car3", { scale: 1.16 });
+
+            var tl2 = gsap.timeline()
+            tl2.to("#masked-image-inner", { duration: 4, scale: 1.7 })
+                .to("#masked-image-inner", { duration: 4, scale: 1.3 })
+                .to("#masked-image-inner", { duration: 4, scale: 1.6 })
+                .to("#masked-image-inner", { duration: 4, scale: 1.4 });
+
+            tl = gsap.timeline()
+                .to("#legal, #offer_copy, #subline, #cityintro_wrapper", { duration: 1, opacity: 1 })
+                .to("#group1, #car1", { duration: 1, opacity: 1 }, "<")
+                .add(function ()
+                {
+                    //wait
+                }, "+=2")
+                .call(function ()
+                {
+                    document.getElementById("target").setAttribute("d", paths[ "shape4" ]);
+                    setTimeout(function () { startMorph('.js-star', '.js-target', 1500); }, 10);
+                })
+                .to("#car1", { duration: 1, opacity: 0 }, "<")
+                .to("#car3", { duration: 1, opacity: 1 })
+                .add(function ()
+                {
+                    //wait
+                }, "+=2")
+                .call(function ()
+                {
+                    document.getElementById("target").setAttribute("d", paths[ "shape3" ]);
+                    setTimeout(function () { startMorph('.js-star', '.js-target', 1500); }, 10);
+                })
+                .to("#car3, #offer_copy, #subline", { duration: 1, opacity: 0 })
+                .to("#car2, #dealer, #supline", { duration: 1, opacity: 1 })
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div id="over" class="over">
+        <div class="over-content">
+            Weitere Informationen zum offiziellen Kraftstoffverbrauch und den offiziellen spezifischen
+            CO<sub>2</sub>-Emissionen neuer Personenkraftwagen können dem „Leitfaden über den Kraftstoffverbrauch, die
+            CO<sub>2</sub>-Emissionen und den Stromverbrauch neuer Personenkraftwagen“ entnommen werden, der an allen
+            Verkaufsstellen und bei der DAT Deutsche Automobil Treuhand GmbH, Hellmuth-Hirth-Str. 1, D-73760 Ostfildern
+            oder unter <a href="https://www.dat.de/" target="_blank" id="datlink" class="datlink" style="font-weight: bold; text-decoration: underline; color: #fff">www.dat.de</a> unentgeltlich
+            erhältlich ist.
+        </div>
+        <div id="close">x</div>
+    </div>
+    <div id="dat-trigger"></div>
+    <div id="container">
+
+        <div id="t1" class="copy img">
+        </div>
+
+        <div id="t2" class="copy img">
+        </div>
+
+        <div id="t3" class="copy img">
+        </div>
+
+        <div id="t4" class="copy img">
+        </div>
+
+        <div id="cityintro_wrapper">
+            SIND CUPRA<br>
+            in <span id="cityintro">Solingen</span>.
+        </div>
+
+        <div id="subline" class="copy img">
+            KATEGORIEN ZU HINTERFRAGEN.
+        </div>
+
+        <div id="offer_copy" class="copy img">
+            BEREIT.
+        </div>
+
+        <div id="dealerpush">
+            <div id="supline" class="copy img">
+                WIR SIND CUPRA.
+            </div>
+            <div id="dealer" class="copy img name-normal address-small">
+                <div id="dealername">Autohaus Lackmann GmbH</div>
+                <div id="address">Carl-Ruß-Str. 1, 42719 Solingen</div>
+            </div>
+        </div>
+
+
+
+        <div id="car1" class="img" style="transform: scale(1.16, 1.16);">
+            <img src="./car1.png">
+        </div>
+
+        <div id="car2" class="img" style="transform: scale(1.16, 1.16);">
+            <img src="./car2.png">
+        </div>
+
+        <div id="car3" class="img" style="transform: scale(1.16, 1.16);">
+            <img src="./car3.png">
+        </div>
+
+        <div id="legal" class="copy img">
+            <img id="button-hover" src="./hover.png">
+            <img src="./legal.png">
+        </div>
+
+        <div id="group1">
+            <div id="masked-image">
+                <img id="masked-image-inner" src="./pattern.jpg">
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="300" height="600">
+                <defs>
+                    <clippath id="shape">
+                        <path id="source" class="js-star" d="M66.11,245.48l-53.75,22.8a4.84,4.84,0,0,0-2.85,4.09,8.6,8.6,0,0,0,.85,2.9L43,350.83c2.16,5,5.37,6,7.15,6.49a10.18,10.18,0,0,0,5.33-.5l49.38-17.4a9.37,9.37,0,0,1,7.64,0c.74.32,124,55,124.2,55a11.85,11.85,0,0,0,4.32.83,10.3,10.3,0,0,0,2.46-.41,8.22,8.22,0,0,0,3.74-2.17c.33-.32,9-10.17,9-10.17a5.19,5.19,0,0,1,2.28-1.29c4.59-1.4,20-4.7,21.25-4.93a9.19,9.19,0,0,0,4.74-2.1,9.58,9.58,0,0,0,3.27-6.08,4.74,4.74,0,0,0,.1-1v-56.9c0-5.13-5.11-9.56-9.29-9.29a15.42,15.42,0,0,0-3.42.59s-68.63,18.28-72,18.28a10.7,10.7,0,0,1-4.51-1S75.36,245.48,75.43,245.48a11.81,11.81,0,0,0-4.6-1.22,11.12,11.12,0,0,0-4.72,1.22"></path>
+                    </clippath>
+                    <path id="target" class="js-target" d="M66.11,245.48l-53.75,22.8a4.84,4.84,0,0,0-2.85,4.09,8.6,8.6,0,0,0,.85,2.9L43,350.83c2.16,5,5.37,6,7.15,6.49a10.18,10.18,0,0,0,5.33-.5l49.38-17.4a9.37,9.37,0,0,1,7.64,0c.74.32,124,55,124.2,55a11.85,11.85,0,0,0,4.32.83,10.3,10.3,0,0,0,2.46-.41,8.22,8.22,0,0,0,3.74-2.17c.33-.32,9-10.17,9-10.17a5.19,5.19,0,0,1,2.28-1.29c4.59-1.4,20-4.7,21.25-4.93a9.19,9.19,0,0,0,4.74-2.1,9.58,9.58,0,0,0,3.27-6.08,4.74,4.74,0,0,0,.1-1v-56.9c0-5.13-5.11-9.56-9.29-9.29a15.42,15.42,0,0,0-3.42.59s-68.63,18.28-72,18.28a10.7,10.7,0,0,1-4.51-1S75.36,245.48,75.43,245.48a11.81,11.81,0,0,0-4.6-1.22,11.12,11.12,0,0,0-4.72,1.22"></path>
+                </defs>
+            </svg>
+        </div>
+
+
+    </div>
+    <script>
+
+        window.onload = function ()
+        {
+            if (Enabler.isInitialized())
+            {
+                init();
+            } else
+            {
+                Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+            }
+        }
+
+        function bgExitHandler(e)
+        {
+            var format = "300x600:halfpagead";
+            var feedUrl = dynamicContent.feed[ 0 ].exit_url.Url;
+
+            feedUrl = feedUrl.replace("{{format}}", format);
+            feedUrl = feedUrl.replaceAll("%s", Enabler.getDartSiteName());
+            feedUrl = feedUrl.replace("%ecid!", Enabler.getDartCreativeId());
+
+            var dynamicId1 = Enabler.getParameter("%eexpid!");
+
+            feedUrl = feedUrl.replace("%eexpid!", dynamicId1);
+
+            Enabler.exitOverride("Click", feedUrl);
+        }
+
+        document.getElementById('datlink').addEventListener('click', function ()
+        {
+            Enabler.exitOverride("DAT", 'https://www.dat.de/');
+        }, false);
+
+
+        function is_touch_device()
+        {
+            var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
+            var mq = function (query)
+            {
+                return window.matchMedia(query).matches;
+            }
+
+            if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch)
+            {
+                return true;
+            }
+
+            var query = [ '(', prefixes.join('touch-enabled),('), 'heartz', ')' ].join('');
+            return mq(query);
+        }
+
+        document.getElementById("close").addEventListener("click", function ()
+        {
+            document.getElementById("over").style.display = "none";
+        });
+
+        if (!is_touch_device())
+        {
+            document.getElementById("dat-trigger").addEventListener("mouseover", function ()
+            {
+                document.getElementById("over").style.display = "flex";
+            });
+            document.getElementById("over").addEventListener("mouseleave", function ()
+            {
+                document.getElementById("over").style.display = "none";
+            });
+        }
+        else
+        {
+            document.getElementById("dat-trigger").addEventListener("click", function ()
+            {
+                document.getElementById("over").style.display = "flex";
+            });
+
+            document.getElementById("button-hover").style.opacity = "1";
+        }
+
+    </script>
+
+
+<iframe style="display: none;" src="./saved_resource(10).html"></iframe></body></html>

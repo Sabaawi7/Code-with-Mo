@@ -1,0 +1,9 @@
+Adform=window.Adform||{};
+Adform.host="https://track.adform.net";
+Adform.shost="https://s1.adform.net";
+Adform.scriptBase=Adform.shost+"/banners/scripts/";
+Adform.cache="626";
+Adform.ADFBannerData={"URL":"https://track.adform.net/adfserve/?CC=1&bn=62424326;adfm_aali=588641562703697367;adfm_aacr=587132995162426461;click=https://aax-eu.amazon-adsystem.com/x/c/RHXuNjh8CXAz8ieHP-jqZ00AAAGHTgEPRAMAABPeAQBhcHNfdHhuX2JpZDEgICBhcHNfdHhuX2ltcDEgICAwv7An/","CREFURL":"https%3a%2f%2faax-eu.amazon-adsystem.com%2f","BN":62424326,"BSURL":"https://cdn.doubleverify.com/dvbs_src.js?ctx=11655933&cmp=2785182&plc=62424326&sid=1378084&dvregion=0&unit=728x90&aufilter1=165376&autt=1&aubndl=&audeal=&auevent=0&prr=1&ppid=111&auadv=165376&aucmp=2785182&auorder=84170063&aucrtv=57671870&auadid=1378084&c6=1459970&c8=&auplc=9634581&turl=&c1=VF-DE+Deutschland&c2=DE_23_AO_P_V_G_M_cic-238-cre----per-gc4-stan-PER&c3=RT_PD_C-238-lte-sta-Pre&c4=gigacube_pre_amazon_spring_230309_728x90&c5=Amazon-donotuse1&c7=Amazon+IT+(Media)&c9=&c10=Amazon_PO_AL_None_BNR_CC_GigaCube","BSDATA":"1","READ_CONSENT":true};
+if(!Adform.ADFBannerParams)Adform.ADFBannerParams=[];
+Adform.ADFBannerParams.push(Adform.ADFBannerData);
+typeof Adform.ADFUtilInstance=="undefined"?document.write('<scr'+'ipt type="text/javascript" src="https://s1.adform.net/stoat/626/s1.adform.net/bootstrap.js"></scr'+'ipt>'):new Adform.ADFBanner();
