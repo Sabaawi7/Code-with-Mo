@@ -1,0 +1,10 @@
+Duesseldorf
+Frankfurt
+Muenchen
+Berlin
+Hamburg
+Stuttgart
+Koeln
+Bonn
+Bochum
+Dortmund
